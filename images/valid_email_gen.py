@@ -31,3 +31,16 @@ if len(email)>=6:
         print("wrong email 2")
 else:
     print("wrong email 1")
+
+# method -2 using regex
+
+import re
+
+email_condition=r"^[a-z]+[\ . _]?[a-z0-9]+[@]\w{2,3}$"
+user_email=input("enter email :")
+
+if re.search(email_condition,user_email):
+    print("right email")
+
+else:
+    print("wrong email")  
